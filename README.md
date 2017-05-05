@@ -1,2 +1,2 @@
 # Tutorial
-作为网络笔记用
+elisp_run_current_file emacs内部执行程序
