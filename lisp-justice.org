@@ -9,10 +9,17 @@
 
 表达式都会被求值
 
-Quote
-Atom
-Eq
-Car
-Cdr
-Cons
-Cond
+** Quote
+引用：将内容作为数据，即不对其求值
+
+(quote (hello world)) 它的语法糖表现形式为：
+
+'(hello world)
+
+
+** Atom
+** Eq
+** Car
+** Cdr
+** Cons
+** Cond
