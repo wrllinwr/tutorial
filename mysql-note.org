@@ -1,5 +1,8 @@
 
 ## sql终端显示方式
-MySQL 
-1.myql>pager less -SFX;
+
+MySQL
+
+1.myql>pager less -SFX;  
+
 2.select * from table \G (使用 \G , 比较推荐这个用法，把行转化成列显示)
