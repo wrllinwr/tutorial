@@ -1,0 +1,130 @@
+* 常用命令
+查看端口被占用情况
+netstat -an|grep 3306
+
+mount 挂在usb CD
+https://download.parallels.com/desktop/v4/docs/en/Parallels_Desktop_Users_Guide/22570.htm
+mount -o exec /dev/cdrom /media/cdrom
+
+linux挂载mac上的共享文件夹
+https://wtser.com/jiang-mac-os-x-shang-de-mu-lu-gua-zai-dao-linux-de-fang-fa/
+mount -t cifs //ServerName/ShareName /mnt/YourMountPointName -o
+         username=ServerUsername,password=YourPassword,nounix,sec=ntlmssp
+
+
+查看端口是否被占用
+lsof -i:port
+
+* Lisp Machine
+http://www.unlambda.com/
+https://loomcom.com/genera/
+
+https://www.youtube.com/watch?v=12USa3gU_oU
+x11
+putty
+http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe
+ubuntu 7.10
+http://old-releases.ubuntu.com/releases/gutsy/ubuntu-7.10-server-amd64.iso
+
+Xming X Server for windows
+http://sourceforge.net/projects/xming
+
+wget http://www.unlambda.com/download/genera/snap4.tar.gz
+1.新建vbox
+network 添加端口转发ssh 3022 22
+
+2.替换源
+sudo nano /etc/apt/source.list
+打开注释
+两次替换
+ctrl + \
+us.archive.
+old-releases.
+
+ctrl + \
+security.
+old-releases.
+
+sudo apt-get update
+sudo apt-get upgrade -y
+
+3.安装所需服务
+sudo apt-get install dkms build-essential linux-headers-generic
+linux-headers-$(uname -r) xorg openssh-server nfs-common nfs-user-server inetutils-inetdc
+
+4.配置服务
+touch inetd.conf
+/etc/inetd.conf
+daytime stream tcp nowait root internal
+daytime dgram udp wait root internal
+time stream tcp nowait root internal
+time dgram udp wait root internal
+
+/etc/hosts
+127.0.0.1 localhost
+127.0.0.1 genera-host.hsd1.f1.comcast.net genera-host
+
+10.0.0.2 genera
+10.0.0.1 genera-host
+
+# The fllowing lines are desirable for IPv6 capable hosts
+::1          ip6-localhost ip6-loopback
+fe00::0      ip6-localnet
+ff00::0      ip6-mcastprefix
+ff02::1      ip6-allnodes
+ff02::2      ip6-allrouters
+ff02::3      ip6-allhosts
+
+/etc/exports
+/ genera(rw,no_root_squash)
+
+sudo /etc/init.d/inetutils-inetd restart
+
+5.snap4
+tar xzvf snap4.tar.gz
+rm snap4/dot.VLM README
+mv snap4/.VLM ~
+
+.VLM
+genera.network: 10.0.0.2; mask=255.255.255.0; gateway=10.0.0.1
+genera.virtualMemory: 4096
+genera.world: /var/lib/symbolics/Genera-8-5.vlod
+genera.debugger: /var/lib/symbolics/VLM_debugger
+genera.caldLoad.geometry: 800x600
+genera.main.geometry: 1280x720+0+0
+
+SDIR=/var/lib/symbolics
+sudo mkdir $SDIR
+sudo cp snap4/* $SDIR
+rm -rf snap4
+
+6.opengenera2
+--------
+设置vbox共享文件，将mac下的Opengenera拷贝到linux中
+sudo mount -t vboxsf linweiran /home/lispm/d
+cp d/opengenera2.tar.bz2 .
+sudo umount d
+rm -rf d
+sudo tar xvfj opengenera2.tar.bz2
+--------
+
+sudo cp -R og2/sys.sct $SDIR
+sudo mkdir $SDIR/rel-8-5
+sudo ln -s $SDIR-rel-8-5/ $SDIR/sys.sct
+sudo ln -s $SDIR/sys/sct $SDIR/rel-8-5/sys.sct
+sudo mv $SDIR/genera /usr/local/bin
+
+7.windows系统启动Xming,putty登录Linux
+--------
+启动lisp machine
+--------
+sudo genera
+
+8.设置lisp machine
+** How to use Lisp Machine
+* Linux kerner
+** 视频
+** linux 内核课程
+https://www.youtube.com/watch?v=1fJ6t9mRAoE&list=PLCJcQMZOafIAfS9sz0L9VSqKN0Cmr0E-1
+** 汇编课程
+清华同方的
