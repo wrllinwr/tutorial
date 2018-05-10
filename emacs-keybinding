@@ -10,3 +10,10 @@ M-x mark-defun 或者 C-M-h         //选中函数
 M-x indent-region 或者  C-M-\        //格式化
 
 #查找 rgrep
+
+#调整窗口大小
+必须是多个窗口时
+C-x {/} 水平调整
+C-x ^ 将当前窗口变高
+
+调整frame大小还不知道？？？？
