@@ -4,6 +4,9 @@ git commit -m 'xxx'
 有时候，我们想把一个项目开源出去，提交到github上面去，免不了就要切换远程仓库地址。那这时候有什么办法解决呢？
 据目前自己的了解，有三种办法。
 
+git当前url是哪个远程仓库
+git remote -v
+
 一、修改命令
 git remote set-url origin url
 
