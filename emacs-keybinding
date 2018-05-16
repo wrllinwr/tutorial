@@ -21,3 +21,16 @@ C-x ^ 将当前窗口变高
 代码调转
 M-.进入到方法
 C-^返回
+
+大小写转换
+从光标位置开始，处理单词后半部分
+capitalize-word (M-c) -- 首字母改为大写
+upcase-word (M-u) -- 全部改为大写
+downcase-word (M-l) -- 全部改为小写
+从光标位置开始，处理单词前半部分
+negtive-argument; capitalize-word (M-- M-c)
+negtive-argument; upcase-word (M-- M-u)
+negtive-argument; downcase-word (M-- M-l)
+改变选定区域的大小写
+downcase-region (C-x C-l) -- 选定区域全部改为小写
+upcase-region (C-x C-u) -- 选定区域全部改为大写
