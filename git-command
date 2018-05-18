@@ -38,3 +38,6 @@ git remote add origin git@github.com:sheng/demo.git
 git remote add origin https://github.com/miaoihan/weibo.git 
 $git fetch origin //获取远程更新 
 $git merge origin/master //把更新的内容合并到本地分支
+-------------------------------------
+Updates were rejected because the tip of your current branch is behind
+git push -u origin master -f 
