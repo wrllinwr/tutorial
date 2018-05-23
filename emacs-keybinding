@@ -34,3 +34,6 @@ negtive-argument; downcase-word (M-- M-l)
 改变选定区域的大小写
 downcase-region (C-x C-l) -- 选定区域全部改为小写
 upcase-region (C-x C-u) -- 选定区域全部改为大写
+
+替换字符串
+replace-string
