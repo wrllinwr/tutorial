@@ -41,3 +41,13 @@ $git merge origin/master //把更新的内容合并到本地分支
 -------------------------------------
 Updates were rejected because the tip of your current branch is behind
 git push -u origin master -f 
+
+==============================
+gitlab 502
+http://blog.51cto.com/xiaozhagn/2122026
+
+gitlab 安装
+https://www.jianshu.com/p/174ea6607e31
+
+gitlab git命令
+https://www.jianshu.com/p/038ccb3518f2
