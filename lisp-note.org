@@ -4,3 +4,10 @@ http://acl.readthedocs.io/en/latest/zhCN/ch2-cn.html#variables
 
 lisp web
 http://lispwebtales.readthedocs.io/zh_CN/latest/frontmatter.html
+
+田春采访
+http://www.codeweblog.com/%e7%94%b0%e6%98%a5-%e8%b5%b0%e5%9c%a8lisp%e7%9a%84%e5%b2%94%e8%b7%af%e4%b8%8a-%e5%9b%be%e7%81%b5%e8%ae%bf%e8%b0%88/
+
+《CL》
+《CLTL2》
+《On Lisp》
